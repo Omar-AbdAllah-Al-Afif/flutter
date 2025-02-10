@@ -1,0 +1,52 @@
+[
+  {
+    "title": "ElevatedButton",
+    "description": "A material design button that elevates when pressed.",
+    "explanation": "ElevatedButton is a button that adds depth using a shadow effect. It is commonly used for primary actions in a Flutter app. You can customize its style using the `style` parameter, and it is defined inside the `onPressed` callback."
+  },
+  {
+    "title": "TextButton",
+    "description": "A button without elevation, typically used for secondary actions.",
+    "explanation": "TextButton is a simple, flat button without elevation. It is often used for less important actions like 'Cancel' or 'Read More'. You can customize its appearance with the `style` property."
+  },
+  {
+    "title": "OutlinedButton",
+    "description": "A button with a border outline but no elevation.",
+    "explanation": "OutlinedButton is useful for medium-emphasis actions. It has a border around the text but no background color. You can modify the border using `side` inside the `style` property."
+  },
+  {
+    "title": "IconButton",
+    "description": "A button that displays an icon instead of text.",
+    "explanation": "IconButton is typically used for actions like navigation, search, or settings. It requires an `icon` parameter and an `onPressed` callback. You can also customize its color and size."
+  },
+  {
+    "title": "FloatingActionButton (FAB)",
+    "description": "A circular button that floats above the UI.",
+    "explanation": "FloatingActionButton (FAB) is used for the most important action in an app, such as adding a new item. It is placed using the `floatingActionButton` property in `Scaffold`. You can add icons or even animations inside it."
+  },
+  {
+    "title": "DropdownButton",
+    "description": "A button that shows a list of options when tapped.",
+    "explanation": "DropdownButton allows users to select from multiple choices. It requires a `value`, a list of `items`, and an `onChanged` function. It is useful for selecting categories, filters, or settings."
+  },
+  {
+    "title": "PopupMenuButton",
+    "description": "A button that shows a popup menu when tapped.",
+    "explanation": "PopupMenuButton is used to display a list of actions in a popup menu. It is often placed in the app bar or next to items in a list. You define menu items using `PopupMenuItem`."
+  },
+  {
+    "title": "BackButton",
+    "description": "A button that navigates back to the previous screen.",
+    "explanation": "BackButton is commonly used in the app bar to navigate back to the previous screen. It calls `Navigator.pop(context)` when pressed. It is automatically included in `AppBar` if a route has a parent."
+  },
+  {
+    "title": "CloseButton",
+    "description": "A button that closes dialogs or screens.",
+    "explanation": "CloseButton is similar to BackButton but is specifically used to dismiss modals or dialogs. It also calls `Navigator.pop(context)`, but it is typically placed in a dialog's top-right corner."
+  },
+  {
+    "title": "GestureDetector",
+    "description": "A widget that detects taps and gestures without a visible button.",
+    "explanation": "GestureDetector allows you to wrap any widget and make it respond to gestures like tap, double-tap, swipe, and long press. It provides full control over user interactions without using predefined buttons."
+  }
+]
