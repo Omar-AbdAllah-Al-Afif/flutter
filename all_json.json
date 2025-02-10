@@ -99,5 +99,54 @@
     "description": "A widget that allows users to select a value by sliding a handle.",
     "explanation": "Slider provides a way to select values within a range using a sliding knob. Example:\n\n```dart\ndouble _value = 50;\nSlider(\n  value: _value,\n  min: 0,\n  max: 100,\n  divisions: 10,\n  label: _value.round().toString(),\n  onChanged: (double newValue) {\n    setState(() {\n      _value = newValue;\n    });\n  },\n)\n```"
   }
-
+{
+    "title": "Image.asset",
+    "description": "Displays an image from the local assets folder.",
+    "explanation": "Image.asset is used to display images stored in the `assets` directory of your project. You need to declare the image paths in `pubspec.yaml`. Example: `Image.asset('assets/image.png')`."
+  },
+  {
+    "title": "Image.network",
+    "description": "Loads and displays an image from the internet.",
+    "explanation": "Image.network fetches an image from a URL and displays it in the app. It supports caching and placeholders while loading. Example: `Image.network('https://example.com/image.jpg')`."
+  },
+  {
+    "title": "Image.file",
+    "description": "Displays an image from the local file system.",
+    "explanation": "Image.file is used to show images stored on the device, often retrieved using file pickers or camera APIs. Example: `Image.file(File('/path/to/image.jpg'))`."
+  },
+  {
+    "title": "Image.memory",
+    "description": "Displays an image from raw bytes in memory.",
+    "explanation": "Image.memory allows displaying images stored as byte arrays, often used with image processing. Example: `Image.memory(Uint8List.fromList(bytes))`."
+  },
+  {
+    "title": "FadeInImage",
+    "description": "Displays a placeholder image while loading another image.",
+    "explanation": "FadeInImage is useful when loading network images, providing a smooth transition effect from a placeholder to the actual image. Example: `FadeInImage.assetNetwork(placeholder: 'assets/placeholder.png', image: 'https://example.com/image.jpg')`."
+  },
+  {
+    "title": "CircleAvatar",
+    "description": "Displays an image inside a circular avatar.",
+    "explanation": "CircleAvatar is commonly used for profile pictures. It can display an image or initials. Example: `CircleAvatar(backgroundImage: AssetImage('assets/profile.jpg'))`."
+  },
+  {
+    "title": "ClipRRect",
+    "description": "Displays an image with rounded corners.",
+    "explanation": "ClipRRect allows clipping an image into a rounded shape by specifying a border radius. Example: `ClipRRect(borderRadius: BorderRadius.circular(10), child: Image.asset('assets/image.png'))`."
+  },
+  {
+    "title": "ImageFiltered",
+    "description": "Applies image filters like blur to an image.",
+    "explanation": "ImageFiltered lets you apply effects like blur or grayscale to images. Example: `ImageFiltered(imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 5), child: Image.asset('assets/image.png'))`."
+  },
+  {
+    "title": "DecoratedBox",
+    "description": "Displays an image as a background decoration.",
+    "explanation": "DecoratedBox allows setting an image as a container background using `BoxDecoration`. Example: `DecoratedBox(decoration: BoxDecoration(image: DecorationImage(image: AssetImage('assets/bg.jpg'))))`."
+  },
+  {
+    "title": "Hero",
+    "description": "Creates a smooth transition animation between images.",
+    "explanation": "Hero is used for image transitions between screens. Example: `Hero(tag: 'profilePic', child: Image.asset('assets/profile.jpg'))`."
+  }
 ]
