@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Form",
+    "description": "A container for grouping form fields and handling validation.",
+    "explanation": "The Form widget helps manage multiple input fields, validation, and submission. It requires a `GlobalKey<FormState>` to track the form state. Example:\n\n```dart\nfinal _formKey = GlobalKey<FormState>();\nForm(\n  key: _formKey,\n  child: Column(\n    children: [\n      TextFormField(),\n      ElevatedButton(\n        onPressed: () {\n          if (_formKey.currentState!.validate()) {\n            print('Form is valid');\n          }\n        },\n        child: Text('Submit'),\n      )\n    ],\n  ),\n)\n```"
+  },
+  {
+    "title": "TextFormField",
+    "description": "A text input field with built-in validation support.",
+    "explanation": "TextFormField is a commonly used input field in forms. It supports validators and controllers. Example:\n\n```dart\nTextFormField(\n  decoration: InputDecoration(labelText: 'Enter your name'),\n  validator: (value) {\n    if (value == null || value.isEmpty) {\n      return 'Please enter your name';\n    }\n    return null;\n  },\n)\n```"
+  },
+  {
+    "title": "TextField",
+    "description": "A basic text input field without form validation.",
+    "explanation": "TextField allows users to enter text but doesn't provide built-in validation like TextFormField. It can be used with a controller to manage input. Example:\n\n```dart\nTextEditingController _controller = TextEditingController();\nTextField(\n  controller: _controller,\n  decoration: InputDecoration(labelText: 'Enter text'),\n)\n```"
+  },
+  {
+    "title": "DropdownButtonFormField",
+    "description": "A dropdown button with built-in form validation.",
+    "explanation": "DropdownButtonFormField allows users to select an option from a dropdown list and supports validation. Example:\n\n```dart\nDropdownButtonFormField(\n  decoration: InputDecoration(labelText: 'Select a country'),\n  items: [\n    DropdownMenuItem(child: Text('USA'), value: 'USA'),\n    DropdownMenuItem(child: Text('Canada'), value: 'Canada'),\n  ],\n  onChanged: (value) {},\n  validator: (value) => value == null ? 'Please select a country' : null,\n)\n```"
+  },
+  {
+    "title": "CheckboxListTile",
+    "description": "A checkbox with a label and built-in state management.",
+    "explanation": "CheckboxListTile provides a labeled checkbox with an onChanged function to manage its state. Example:\n\n```dart\nbool _isChecked = false;\nCheckboxListTile(\n  title: Text('Accept Terms & Conditions'),\n  value: _isChecked,\n  onChanged: (bool? value) {\n    setState(() {\n      _isChecked = value!;\n    });\n  },\n)\n```"
+  },
+  {
+    "title": "RadioListTile",
+    "description": "A radio button list item for selecting a single option.",
+    "explanation": "RadioListTile is useful for multiple-choice selections where only one option can be selected. Example:\n\n```dart\nint _selectedValue = 1;\nRadioListTile(\n  title: Text('Option 1'),\n  value: 1,\n  groupValue: _selectedValue,\n  onChanged: (int? value) {\n    setState(() {\n      _selectedValue = value!;\n    });\n  },\n)\n```"
+  },
+  {
+    "title": "SwitchListTile",
+    "description": "A toggle switch with a label for enabling or disabling settings.",
+    "explanation": "SwitchListTile allows users to turn options on or off with a toggle switch. Example:\n\n```dart\nbool _isSwitched = false;\nSwitchListTile(\n  title: Text('Enable Notifications'),\n  value: _isSwitched,\n  onChanged: (bool value) {\n    setState(() {\n      _isSwitched = value;\n    });\n  },\n)\n```"
+  },
+  {
+    "title": "DatePicker",
+    "description": "A date selection dialog that allows users to pick a date.",
+    "explanation": "DatePicker is used to let users select a date from a pop-up calendar. Example:\n\n```dart\nFuture<void> _selectDate(BuildContext context) async {\n  DateTime? picked = await showDatePicker(\n    context: context,\n    initialDate: DateTime.now(),\n    firstDate: DateTime(2000),\n    lastDate: DateTime(2101),\n  );\n}\n```"
+  },
+  {
+    "title": "TimePicker",
+    "description": "A time selection dialog that allows users to pick a time.",
+    "explanation": "TimePicker lets users choose a time from a pop-up clock. Example:\n\n```dart\nFuture<void> _selectTime(BuildContext context) async {\n  TimeOfDay? picked = await showTimePicker(\n    context: context,\n    initialTime: TimeOfDay.now(),\n  );\n}\n```"
+  },
+  {
+    "title": "Slider",
+    "description": "A widget that allows users to select a value by sliding a handle.",
+    "explanation": "Slider provides a way to select values within a range using a sliding knob. Example:\n\n```dart\ndouble _value = 50;\nSlider(\n  value: _value,\n  min: 0,\n  max: 100,\n  divisions: 10,\n  label: _value.round().toString(),\n  onChanged: (double newValue) {\n    setState(() {\n      _value = newValue;\n    });\n  },\n)\n```"
+  }
+]
